@@ -1,0 +1,134 @@
+{
+ "gray-barn-before": [
+  1536,
+  2048
+ ],
+ "gray-barn-after": [
+  1536,
+  2048
+ ],
+ "red-roof-before": [
+  2048,
+  1536
+ ],
+ "red-roof-after": [
+  2048,
+  1536
+ ],
+ "shelter-before": [
+  1536,
+  2048
+ ],
+ "shelter-after": [
+  1536,
+  2048
+ ],
+ "red-barn-before": [
+  720,
+  960
+ ],
+ "red-barn-after": [
+  720,
+  960
+ ],
+ "tan-barn-before": [
+  1536,
+  2048
+ ],
+ "tan-barn-after": [
+  1536,
+  2048
+ ],
+ "siding-before": [
+  1536,
+  2048
+ ],
+ "siding-after": [
+  1536,
+  2048
+ ],
+ "hip-roof-before": [
+  960,
+  720
+ ],
+ "hip-roof-after": [
+  960,
+  720
+ ],
+ "white-barn-before": [
+  666,
+  960
+ ],
+ "white-barn-after": [
+  904,
+  960
+ ],
+ "green-building-before": [
+  960,
+  720
+ ],
+ "green-building-after": [
+  960,
+  720
+ ],
+ "commercial-roof": [
+  2048,
+  1536
+ ],
+ "commercial-roof-2": [
+  2048,
+  1536
+ ],
+ "commercial-building": [
+  960,
+  720
+ ],
+ "commercial-building-2": [
+  960,
+  720
+ ],
+ "coating-line": [
+  1536,
+  2048
+ ],
+ "turkey-barns": [
+  2048,
+  1536
+ ],
+ "turkey-barns-2": [
+  2048,
+  1536
+ ],
+ "silo-barn": [
+  720,
+  960
+ ],
+ "grain-bins": [
+  1536,
+  2048
+ ],
+ "red-barn-silo": [
+  2048,
+  1536
+ ],
+ "truck": [
+  1536,
+  2048
+ ],
+ "roof-close": [
+  1536,
+  2048
+ ],
+ "red-barn-long": [
+  1536,
+  2048
+ ],
+ "green-roof-barn": [
+  1536,
+  2048
+ ],
+ "farm-bins": [
+  2048,
+  1536
+ ]
+}
