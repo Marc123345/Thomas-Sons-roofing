@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
 import Img from "@/components/Img"
@@ -181,9 +181,52 @@ export function ServicesList({ eyebrow = "What we do", title = "Roof coating, re
 // ProGrade's drag-to-compare before/after, in BuildGo styling.
 export function BeforeAfter({ job }) {
     const [pos, setPos] = useState(50)
+    const frame = useRef(null)
+    // Pointer events on the whole photo, not the range input: iOS Safari only
+    // moves a range input when you grab its thumb, which here is invisible.
+    // The input stays for keyboard users. touch-action: pan-y keeps vertical
+    // page scrolling working on phones.
+    const moveTo = (e) => {
+        const r = frame.current.getBoundingClientRect()
+        setPos(Math.round(Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100))))
+    }
+    // A finger landing on the photo may just be scrolling the page, so touch
+    // only moves the slider once it has clearly gone sideways (or on a tap).
+    // A vertical swipe ends in pointercancel and leaves the slider alone.
+    const drag = useRef(null)
+    const onDown = (e) => {
+        if (e.button > 0) return
+        frame.current.setPointerCapture(e.pointerId)
+        drag.current = { x: e.clientX, y: e.clientY, on: e.pointerType === "mouse" }
+        if (drag.current.on) moveTo(e)
+    }
+    const onMove = (e) => {
+        const d = drag.current
+        if (!d || !frame.current.hasPointerCapture(e.pointerId)) return
+        if (!d.on) {
+            const dx = Math.abs(e.clientX - d.x), dy = Math.abs(e.clientY - d.y)
+            if (dx < 6 || dx < dy) return
+            d.on = true
+        }
+        moveTo(e)
+    }
+    const onUp = (e) => {
+        const d = drag.current
+        drag.current = null
+        // A tap (no real movement) jumps the slider to that spot.
+        if (d && !d.on && Math.abs(e.clientX - d.x) < 6 && Math.abs(e.clientY - d.y) < 6) moveTo(e)
+    }
     return (
         <figure className="ts-ba">
-            <div className="ts-ba__frame" style={{ "--pos": `${pos}%` }}>
+            <div
+                ref={frame}
+                className="ts-ba__frame"
+                style={{ "--pos": `${pos}%` }}
+                onPointerDown={onDown}
+                onPointerMove={onMove}
+                onPointerUp={onUp}
+                onPointerCancel={() => { drag.current = null }}
+            >
                 <Img img={job.before} sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 560px" />
                 <div className="ts-ba__after">
                     <Img img={job.after} sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 560px" />

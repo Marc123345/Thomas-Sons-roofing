@@ -99,7 +99,8 @@ body { background: #fff; }
 
 /* Before / after (ProGrade pattern) */
 .ts-ba { margin: 0; }
-.ts-ba__frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #ddd; user-select: none; }
+.ts-ba__frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #ddd; user-select: none; -webkit-user-select: none; cursor: ew-resize; touch-action: pan-y; -webkit-touch-callout: none; }
+.ts-ba__frame img { pointer-events: none; -webkit-user-drag: none; }
 .ts-ba__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .ts-ba__after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
 .ts-ba__line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: #fff; pointer-events: none; box-shadow: 0 0 10px rgba(0, 0, 0, .3); }
@@ -107,7 +108,7 @@ body { background: #fff; }
 .ts-ba__tag { position: absolute; top: 14px; padding: 4px 12px; border-radius: 50px; font-family: var(--heading-font); font-size: 13px; font-weight: 700; text-transform: uppercase; pointer-events: none; }
 .ts-ba__tag--b { left: 14px; background: rgba(0, 0, 0, .65); color: #fff; }
 .ts-ba__tag--a { right: 14px; background: var(--primary-color-1); color: #fff; }
-.ts-ba input[type="range"] { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; touch-action: pan-y; }
+.ts-ba input[type="range"] { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; -webkit-appearance: none; appearance: none; pointer-events: none; }
 .ts-ba input[type="range"]:focus-visible + * { outline: none; }
 .ts-ba__frame:focus-within { outline: 3px solid var(--primary-color-1); outline-offset: 3px; }
 .ts-ba figcaption { display: flex; justify-content: space-between; gap: 12px; padding: 14px 4px 0; }
