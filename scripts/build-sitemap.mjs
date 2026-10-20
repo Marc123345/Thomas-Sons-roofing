@@ -1,6 +1,6 @@
 // Writes public/sitemap.xml and public/robots.txt before `next build`.
 import fs from "fs"
-const base = (process.env.NEXT_PUBLIC_SITE_URL || "https://thomas-sons-coatings.vercel.app").replace(/\/$/, "")
+const base = (process.env.NEXT_PUBLIC_SITE_URL || "https://thomas-sons-roofing.vercel.app").replace(/\/$/, "")
 const services = ["commercial-roof-coating", "barn-roof-coating", "metal-roof-painting", "roof-repair", "barn-silo-grain-bin-painting"]
 const paths = ["/", ...services.map((s) => `/${s}`), "/our-work", "/about", "/estimate", "/privacy-policy"]
 const today = new Date().toISOString().slice(0, 10)

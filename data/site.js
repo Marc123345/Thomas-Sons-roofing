@@ -27,7 +27,7 @@ export const site = {
     facebook: "https://www.facebook.com/people/ThomasSons-Painting-and-Roof-Coating/100083418035170/",
     // Canonical address for canonical tags, schema, sitemap and robots.txt.
     // Set NEXT_PUBLIC_SITE_URL (no trailing slash) once the domain is known.
-    url: (process.env.NEXT_PUBLIC_SITE_URL || "https://thomas-sons-coatings.vercel.app").replace(/\/$/, ""),
+    url: (process.env.NEXT_PUBLIC_SITE_URL || "https://thomas-sons-roofing.vercel.app").replace(/\/$/, ""),
     // Jotform the estimate form posts into. Empty = the form shows a
     // call/text panel instead of pretending to send (see EstimateForm.js).
     jotformId: process.env.NEXT_PUBLIC_JOTFORM_ID || "",
