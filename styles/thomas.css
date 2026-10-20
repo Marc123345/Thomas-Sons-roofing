@@ -232,3 +232,43 @@ html, body { overflow-x: clip; }
 .services__details-area .services__details-area-list li { width: auto; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
 .services__details-area .services__details-area-list li i { color: var(--primary-color-1); margin-top: 4px; }
 .services__details-area .img_full { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* ---- Spacing ---- */
+/* Side gutters: the template's 12px put the header and hero on the screen edge. */
+.custom_container, .container { padding-left: 24px; padding-right: 24px; }
+.banner__three .container { max-width: 1440px; }
+@media (min-width: 1200px) {
+    .custom_container { padding-left: 40px; padding-right: 40px; }
+    .banner__three .container { padding-left: 40px; padding-right: 40px; }
+}
+@media (max-width: 575px) {
+    .custom_container, .container, .banner__three .container { padding-left: 20px; padding-right: 20px; }
+}
+.ts-banner-ctas { margin-bottom: 10px; }
+.process__area-title h2 { max-width: 760px; margin-left: auto; margin-right: auto; }
+.services__three-title p { max-width: 380px; }
+
+/* ---- Typography ---- */
+/* Instrument Sans is tight in caps: open up every uppercase label. */
+.build_button, .subtitle, .header__area-menubar-center-menu ul li a, .ts-eyebrow,
+.ts-ba__tag, .ts-mobile-bar a, .ts-contact-list span { letter-spacing: .04em; }
+.build_button { gap: 16px; }
+h1, h2, h3, .ts-scroll-item { letter-spacing: -0.01em; }
+h4, h5, h6, .ts-products li strong, .ts-ba figcaption strong { letter-spacing: 0; }
+.ts-products li strong { font-weight: 600; }
+p { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
+.ts-banner-lead { font-size: 20px; line-height: 1.6; max-width: 600px; }
+.about__three-right p, .choose__three-right p { font-size: 18px; line-height: 1.65; }
+.ts-ba figcaption span { font-size: 14px; }
+@media (max-width: 767px) {
+    body { font-size: 17px; line-height: 1.6; }
+    .ts-banner-lead { font-size: 18px; }
+    h2 { font-size: 34px; line-height: 1.15; }
+    h3 { font-size: 26px; line-height: 1.2; }
+}
+
+/* FAQ sits on the template's dark section: light text on dark. */
+.faq__area-right .faq-item, .faq__area-right .faq-item-body { border-color: var(--border-color-3); }
+.faq__area-right .faq-item .ts-faq-h button.icon { color: #fff; }
+.faq__area-right .faq-item-body p { color: var(--color-6); }

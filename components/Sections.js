@@ -25,7 +25,7 @@ export function Banner({ slides }) {
                             <span className="ts-eyebrow">{site.base} · Agricultural · Commercial · Industrial</span>
                             <h1>
                                 <span className="ts-h1-line">Commercial &amp; farm</span>
-                                <span className="ts-h1-line"><Img img={slides[1]} className="img_left_animation" sizes="300px" priority />roof coating</span>
+                                <span className="ts-h1-line"><Img img={slides[1]} sizes="300px" priority />roof coating</span>
                             </h1>
                             <p className="ts-banner-lead">
                                 Metal roofs refastened, sealed and coated. Pole barns, shops and commercial buildings primed and painted. Three generations of {site.short}.
@@ -107,7 +107,7 @@ export function AboutBlock({ big, small, eyebrow = "About Thomas & Sons", title,
                 <div className="row">
                     <div className="col-xl-5 col-lg-4" />
                     <div className="col-xl-7 col-lg-8">
-                        <div className="about__three-right pt-120 lg-pt-30 pl-30 lg-pl-0">
+                        <div className="about__three-right pt-120 pb-120 lg-pt-30 lg-pb-60 pl-30 lg-pl-0">
                             <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">{eyebrow}</span>
                             <h2 className="wow fadeInRight" data-wow-delay=".6s">{title}</h2>
                             <div className="row mt-20">

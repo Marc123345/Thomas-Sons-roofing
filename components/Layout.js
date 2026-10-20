@@ -266,13 +266,13 @@ function Reveal() {
                 const el = e.target
                 el.style.animationDelay = el.dataset.wowDelay || ""
                 el.classList.add("animated")
-                el.style.visibility = "visible"
                 io.unobserve(el)
             }
         }, { rootMargin: "0px 0px -60px 0px" })
+        // Nothing is ever hidden up front: if the observer never fires, the
+        // content is simply there. The animation plays when it scrolls in.
         for (const el of els) {
             if (el.getBoundingClientRect().top < window.innerHeight) continue // already on screen: leave it
-            el.style.visibility = "hidden"
             io.observe(el)
         }
         return () => io.disconnect()
