@@ -330,7 +330,6 @@ export function ChooseUs({ img }) {
                                     ))}
                                 </ul>
                             </div>
-                            <a className="build_button" href={smsHref}>Text us a photo<i className="flaticon-right-up" aria-hidden="true" /></a>
                         </div>
                     </div>
                 </div>
