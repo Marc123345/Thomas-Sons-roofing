@@ -465,7 +465,7 @@ export function CtaBand({ title = "Tell us about your roof", text }) {
                 <div className="row al-center">
                     <div className="col-lg-7 lg-mb-25">
                         <h2>{title}</h2>
-                        <p>{text || `Text ${site.ownerFirst} a photo and the address, or call. We'll come out, look at it and give you a straight answer.`}</p>
+                        <p>{text || `Text ${site.ownerFirst} the address, or call. We'll come out, look at it and give you a straight answer.`}</p>
                     </div>
                     <div className="col-lg-5">
                         <div className="ts-cta-btns">

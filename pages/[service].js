@@ -37,7 +37,7 @@ export default function ServicePage({ slug }) {
                                 </div>
                                 <div className="all__sidebar-item-help ts-help mb-25">
                                     <Img img={s.gallery[0]} className="ts-help-bg" sizes="400px" />
-                                    <h3>Text {site.ownerFirst} a photo of the roof</h3>
+                                    <h3>Text {site.ownerFirst} about your roof</h3>
                                     <a className="build_button mt-20" href={smsHref}>{site.phone}<i className="fa-solid fa-message-sms" aria-hidden="true" /></a>
                                 </div>
                             </div>

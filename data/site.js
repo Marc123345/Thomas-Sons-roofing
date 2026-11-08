@@ -264,7 +264,7 @@ export const faqs = {
     },
     flat: {
         q: "Do you work on flat and low-slope commercial roofs?",
-        a: "Yes. Send us a text with the address and a photo if you have one, and we'll come look at it.",
+        a: "Yes. Send us a text with the address and we'll come look at it.",
     },
     repairOnly: {
         q: "Can you just fix a leak without coating the whole roof?",
@@ -276,7 +276,7 @@ export const faqs = {
     },
     estimate: {
         q: "How do I get an estimate?",
-        a: `Text or call ${site.ownerFirst} at ${site.phone}, or fill in the estimate form. A photo of the roof and the address helps us get back to you faster.`,
+        a: `Text or call ${site.ownerFirst} at ${site.phone}, or fill in the estimate form. Including the address helps us get back to you faster.`,
     },
 }
 export const homeFaq = ["coatVsReplace", "paintVsCoat", "open", "repairOnly", "estimate"].map((k) => faqs[k])
@@ -292,7 +292,7 @@ export const nav = [
 export const consentText =
     "By checking this box and submitting this form, I give Thomas & Sons Painting and Roof Coating permission to contact me by phone call, text message and email at the number and address I provided, including with messages sent by automated dialing or texting systems. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out of texts or HELP for help."
 export const formPrivacyText =
-    "We collect the name, phone number, email address, property ZIP code and building details you enter here, plus any photo you choose to send. We use it only to contact you about your estimate and to carry out the work if you hire us. We do not sell or share your personal information, and we do not use it for targeted advertising. We keep enquiry records for up to 24 months."
+    "We collect the name, phone number, email address, property ZIP code and building details you enter here. We use it only to contact you about your estimate and to carry out the work if you hire us. We do not sell or share your personal information, and we do not use it for targeted advertising. We keep enquiry records for up to 24 months."
 
 /*
  * ⚠ OPEN ITEMS: need Woody before launch

@@ -17,7 +17,7 @@ export default function Estimate() {
                         <div className="col-lg-5 lg-mb-40">
                             <span className="subtitle">Contact</span>
                             <h2 className="mb-20">The fastest way is a text</h2>
-                            <p className="mb-30">Send a photo of the roof and the address. {site.ownerFirst} will look at it and get back to you to set up a time to see it in person.</p>
+                            <p className="mb-30">Send the address and a few words about the roof. {site.ownerFirst} will get back to you to set up a time to see it in person.</p>
                             <ul className="ts-contact-list">
                                 <li><i className="fa-solid fa-message-sms" aria-hidden="true" /><div><span>Text</span><a href={smsHref}>{site.phone}</a></div></li>
                                 <li><i className="fa-solid fa-phone" aria-hidden="true" /><div><span>Call</span><a href={telHref}>{site.phone}</a></div></li>

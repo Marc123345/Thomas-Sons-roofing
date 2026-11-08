@@ -14,7 +14,6 @@ const F = {
     type: "q7_buildingType",
     work: "q8_work",
     contact: "q9_contact",
-    photo: "q10_photo[]",
     notes: "q11_notes",
     consent: "q12_consent[]",
 }
@@ -31,7 +30,7 @@ export default function EstimateForm({ id = "ef", title = "Request an estimate" 
         return (
             <div className="ts-form ts-form--fallback">
                 <h3>{title}</h3>
-                <p>The quickest way to reach us is a text. Send {site.ownerFirst} a photo of the roof and the address, and he'll get back to you.</p>
+                <p>The quickest way to reach us is a text. Send {site.ownerFirst} the address and he'll get back to you.</p>
                 <a className="build_button" href={smsHref}>Text {site.phone}<i className="fa-solid fa-message-sms" aria-hidden="true" /></a>
                 <p className="ts-form-alt">Or call <a href={telHref}>{site.phone}</a>, or email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
             </div>
@@ -118,12 +117,6 @@ export default function EstimateForm({ id = "ef", title = "Request an estimate" 
                             <label key={c}><input type="radio" name={F.contact} value={c} defaultChecked={i === 0} />{c}</label>
                         ))}
                     </fieldset>
-                </div>
-                <div className="col-md-12 mt-20">
-                    <div className="request__quote-item">
-                        <label htmlFor={f("photo")}>Photo of the roof <em>(optional)</em></label>
-                        <input id={f("photo")} name={F.photo} type="file" accept="image/*" />
-                    </div>
                 </div>
                 <div className="col-md-12 mt-20">
                     <div className="request__quote-item">
